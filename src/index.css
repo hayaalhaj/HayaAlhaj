@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;900&display=swap");
+@import "tailwindcss";
+
+/* Lets you write dark:... classes too, driven by the .dark class on <html> */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Light mode colours (your original palette) */
+:root {
+  --page: #ffffff;
+  --alt: #fef4ea79; /* the soft cream used behind alternate sections */
+  --surface: #ffffff; /* cards, chips, inputs */
+  --nav: #fef4ea;
+  --ink: #1c1517; /* main text */
+  --muted: #4b4245; /* secondary text */
+  --brand: #aa808b; /* your dusty rose */
+  --coral: #de7d7e; /* your coral accent */
+}
+
+/* Dark mode colours: same rose and coral, slightly lighter so they stay readable */
+.dark {
+  --page: #1a1416;
+  --alt: #231b1e;
+  --surface: #2a2124;
+  --nav: #1a1416;
+  --ink: #f6ecef;
+  --muted: #cdbfc4;
+  --brand: #c9a0ab;
+  --coral: #e8888a;
+  color-scheme: dark;
+}
+
+/* Turns the variables above into Tailwind classes: bg-page, bg-surface, text-brand, border-coral/40 ... */
+@theme inline {
+  --color-page: var(--page);
+  --color-alt: var(--alt);
+  --color-surface: var(--surface);
+  --color-nav: var(--nav);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-brand: var(--brand);
+  --color-coral: var(--coral);
+  --color-cream: #fef4ea; /* text on top of coral buttons */
+}
+
+body {
+  background-color: var(--page);
+  color: var(--ink);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Arabic uses Cairo, which also looks good for the English words mixed inside the text */
+html[lang="ar"] body,
+html[lang="ar"] .font-serif {
+  font-family: "Cairo", sans-serif;
+}
+
+/* Smooth scrolling to sections, switched off for people who prefer reduced motion */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
