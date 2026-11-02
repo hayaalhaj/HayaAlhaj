@@ -171,7 +171,7 @@ export const translations = {
 
     design: {
       heading: "Graphic Design",
-      intro: "A selection of my social media designs, carousels, and motion work.",
+      intro: "A selection of my social media ad designs.",
       filters: { all: "All", social: "Social media", carousel: "Carousels", motion: "Motion" },
       conceptLabel: "Concept",
       slidesLabel: (n) => `${n} slides`,
@@ -182,6 +182,16 @@ export const translations = {
       next: "Next",
       counter: (i, n) => `${i} / ${n}`,
       behance: "View more on Behance",
+    },
+
+    footer: {
+      tagline: "Front-End Developer & Graphic Designer",
+      navHeading: "Explore",
+      connectHeading: "Connect",
+      rights: "All rights reserved.",
+      builtWith: "Built with React & Tailwind CSS",
+      backToTop: "Back to top",
+      email: "Email",
     },
 
     courses: {
@@ -375,7 +385,7 @@ export const translations = {
 
     design: {
       heading: "التصميم الجرافيكي",
-      intro: "مختارات من تصاميم وسائل التواصل الاجتماعي والكاروسيل وأعمال الموشن.",
+      intro: "مختارات من تصاميم الإعلانات لوسائل التواصل الاجتماعي.",
       filters: { all: "الكل", social: "وسائل التواصل", carousel: "كاروسيل", motion: "موشن" },
       conceptLabel: "تصميم تجريبي",
       slidesLabel: (n) => `${n} شرائح`,
@@ -386,6 +396,16 @@ export const translations = {
       next: "التالي",
       counter: (i, n) => `${i} / ${n}`,
       behance: "المزيد على Behance",
+    },
+
+    footer: {
+      tagline: "مطوّرة واجهات أمامية ومصمّمة جرافيك",
+      navHeading: "التنقّل",
+      connectHeading: "تواصل",
+      rights: "جميع الحقوق محفوظة.",
+      builtWith: "بُني باستخدام React وTailwind CSS",
+      backToTop: "العودة للأعلى",
+      email: "البريد الإلكتروني",
     },
 
     courses: {
